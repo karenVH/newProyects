@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>formulario</title>
+</head>
+<body>
+    <form onsubmit="return validarFormulario()" novalidate id="formulario">
+        <label for="numeroTarjeta">Numero de tarjetas</label>
+        <input id="numeroTarjeta" type="text" maxlength="16" autocomplete="off" pattern="[0-9]+" onkeypress="return valideKey(event)";><br>
+        <label for="nombrePropietario">Nombre de propietario</label>
+        <input id="nombrePropietario" type="text" ><br>
+        <label for="fechaExpiracion">fecha de expiración</label>
+        <input id="fechaExpiracion" type="month"  min="2022-01"><br>
+        <label for="cvc">CVC</label>
+        <input id="cvc" type="number" ><br>
+        <input type="submit" value="submit">
+    </form>
+    <script src="validacion.js"></script>
+</body>
+</html>
